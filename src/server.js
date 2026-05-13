@@ -7,9 +7,11 @@ const db = require('./database/db')
 
 // HABILITA O SERVER PARA RECEBER DADOS VIA POST
 
-app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 app.use('/api', routes)
+
+
 
 db.connect()
 
